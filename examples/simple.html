@@ -1,0 +1,18 @@
+<html>
+<head></head>
+
+<body>
+  <script src="../deps/three.js"></script>
+  <script src="../builds/delta.js"></script>
+  <script>
+  
+  var sim = new delta.Simulation(1);
+  
+  var p1 = sim.createParticle();
+  var p2 = sim.createParticle();
+  p1.pos.x = 100;
+  p2.pos.x = -100;
+  p1.vel.x = -0.25;
+  </script>
+</body>
+</html>

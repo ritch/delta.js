@@ -1,0 +1,32 @@
+<html>
+<head></head>
+
+<body>
+  <script src="../deps/three.js"></script>
+  <script src="../builds/delta.js"></script>
+  <script>
+  
+  var sim = new delta.Simulation(0.01, 1);
+
+  var p1 = sim.createParticle(50);
+  p1.mass = 50;
+  p1.vel.x = -10;
+
+  function row(x, y) {
+    var p = sim.createParticle(5);
+    
+    p.pos.x = x * 15;
+    p.pos.y = y * 15;
+  }
+  
+  var x = 10;
+  while(x--) {
+    var y = 10;
+    while(y--) {
+      row(x, y);
+    }
+  }
+  
+  </script>
+</body>
+</html>

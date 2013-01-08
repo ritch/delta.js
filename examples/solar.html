@@ -1,0 +1,35 @@
+<html>
+<head></head>
+
+<body>
+  <script src="../deps/three.js"></script>
+  <script src="../builds/delta.js"></script>
+  <script>
+  
+  var sim = new delta.Simulation(10000000000, 0.1);
+  
+  sim.showLines = true;
+  
+  var p1 = sim.createParticle(100);
+  
+  p1.mass = 1000;
+  
+  var p2 = sim.createParticle(20);
+  
+  p2.mass = 10;
+  
+  p2.pos.x = 550;
+  p2.pos.y = -300;
+  p2.pos.z = -200;
+  p2.vel.y = 0.000000000005;
+  p2.vel.x = -0.0000000000005;
+  
+  
+  var p3 = sim.createParticle(200);
+  p3.mass = 2000;
+  p3.pos.y = 2500;
+  p3.pos.x = -2500;
+  
+  </script>
+</body>
+</html>

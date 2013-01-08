@@ -1,0 +1,34 @@
+<html>
+<head></head>
+
+<body>
+  <script src="../deps/three.js"></script>
+  <script src="../builds/delta.js"></script>
+  <script>
+  
+  var sim = new delta.Simulation(0.01, 1);
+
+  var i = 15;
+  
+  while(i--) {
+    var p = sim.createParticle(20);
+    p.mass = 100;
+    p.pos.x = (50 * i) - 500;
+    p.pos.y = Math.sin(i) * 50;
+  }
+  
+  
+  var p2 = sim.createParticle(100);
+  p2.mass = 500;
+  
+  p2.pos.x = -800;
+  
+  setTimeout(function() {
+
+    p2.vel.x = 100;
+    
+  }, 500);
+  
+  </script>
+</body>
+</html>
