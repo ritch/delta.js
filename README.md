@@ -20,7 +20,13 @@ This example will roughly simulate the gravitational interaction between the ear
 
     var earth = sim.createParticle(EARTH_RADIUS);
     var moon = sim.createParticle(MOON_RADIUS);
+    
+    // mass in kg
+    earth.mass = 5.97219 * Math.pow(10, 24);
+    moon.mass = 7.34767309 * Math.pow(10, 22);
 
+    // rough initial velocity of the moon
+    // leaving the earth at rest
     moon.pos.x = EM_DISTANCE + EARTH_RADIUS + MOON_RADIUS;
     moon.vel.y = 20000;
     moon.vel.x = -10000;
